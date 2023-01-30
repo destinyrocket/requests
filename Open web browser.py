@@ -37,3 +37,22 @@ webbrowser.register('chrome', None,
   
 # after registering we can open it by getting its code.
 webbrowser.get('chrome').open(url)
+----------------------------------------------------
+
+Open urls in firefox
+ This code is used to open URL in firefox 
+# browser
+  
+import webbrowser
+  
+# To take the URL as input from the user.
+print('Enter the URL: ', end="")
+link = input()
+  
+# Passing firefox executable path to the
+# Mozilla class.
+firefox = webbrowser.Mozilla("C:\\Program Files\
+\Mozilla Firefox\\firefox.exe")
+  
+# Using open() function to display the URL.
+firefox.open(link)
