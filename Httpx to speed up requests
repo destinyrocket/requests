@@ -1,0 +1,16 @@
+import httpx
+import asyncio
+import time 
+async def fetch():
+           urls = ["www.google.com/search",
+                   "www.google.com/images"]
+                   
+            async with htrpx.AsyncClient() as client:
+                reqs=[client.get(url) for url in urls]
+                results=await asyncio.gather(*reqs)
+                print(results)
+            start=time.perf.counter
+            asyncio.run(fetch())
+            end=time.perf_counter()
+            print(end-start)
+           
